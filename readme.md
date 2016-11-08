@@ -29,5 +29,6 @@ Leapfrog Project in Laravel
 * `git clone https://github.com/Nipeshmanshakya/meet.git [foldername]` options folder name if the folde already exists or whatever
 * `cd [foldername]`
 * `composer install`
+* `cp .env.example .env`
 * `php artisan key:generate`
 * `php artisan migrate`
