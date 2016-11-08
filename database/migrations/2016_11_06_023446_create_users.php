@@ -17,10 +17,10 @@ class CreateUsers extends Migration
             $table->increments('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('image');
+            $table->string('image')->default('');
             $table->string('email');
             $table->string('password');
-            $table->string('username');
+            $table->string('username')->nullable();
             $table->timestamps();
         });
     }
