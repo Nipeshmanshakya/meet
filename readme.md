@@ -15,9 +15,19 @@ Leapfrog Project in Laravel
 
 
 ## Phase 1:
-* To do
+* Completed basic registration and login
 
 ## Currently Working:
 * Basic Structure
 * Database and migration
- 
+
+
+
+### Steps to setup
+
+* `cd /path/to/htdocs`
+* `git clone https://github.com/Nipeshmanshakya/meet.git [foldername]` options folder name if the folde already exists or whatever
+* `cd [foldername]`
+* `composer install`
+* `php artisan key:generate`
+* `php artisan migrate`
