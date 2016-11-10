@@ -12,26 +12,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <form action="{{ url('login') }}" method="post">
-            {!! csrf_field() !!}
-            <h1>Login</h1>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input type="text" class="form-control" name="email">
-            </div>
-            <div class="form-group">
-                <label for="">Password</label>
-                <input type="text" class="form-control" name="password">
-            </div>
-
-            <div class="form-group">
-                <button class="btn btn-success">Login</button>
-            </div>
-
-
-        </form>
-    </div>
+    @yield('content')
 </div>
 </body>
 </html>

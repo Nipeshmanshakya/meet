@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterForm;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,7 @@ class LoginController extends Controller
         return view('auth.register');
     }
 
-    function postRegister( Request $request ) {
+    function postRegister( RegisterForm $request ) {
 
         User::create( $request->only(['first_name', 'last_name', 'email', 'password']) );
         return redirect('login');
@@ -33,7 +34,7 @@ class LoginController extends Controller
 
         if( Auth::attempt( $userData ) ) {
 
-            dd("logged in");
+            return redirect('posts');
         }
 
         dd( "failed");

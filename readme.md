@@ -17,6 +17,9 @@ Leapfrog Project in Laravel
 ## Phase 1:
 * Completed basic registration and login
 
+## Phase 2:
+* Create Post
+
 ## Currently Working:
 * Basic Structure
 * Database and migration

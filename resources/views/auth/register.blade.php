@@ -13,20 +13,27 @@
 <body>
 <div class="container">
     <div class="row">
+        <div>
+            @foreach( $errors->all() as $error )
+                <p class="text-danger">{{ $error }}</p>
+            @endforeach
+        </div>
         <form action="{{ url('register') }}" method="post">
             {!! csrf_field() !!}
             <h1>Register</h1>
             <div class="form-group">
                 <label for="">First Name</label>
-                <input type="text" class="form-control" name="first_name">
+                <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
+                <span class="text-danger">{{ $errors->first('first_name') }}</span>
             </div>
             <div class="form-group">
                 <label for="">Last Name</label>
-                <input type="text" class="form-control" name="last_name">
+                <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
+                <span class="text-danger">{{ $errors->first('last_name') }}</span>
             </div>
             <div class="form-group">
                 <label for="">Email</label>
-                <input type="text" class="form-control" name="email">
+                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
             </div>
             <div class="form-group">
                 <label for="">Password</label>
