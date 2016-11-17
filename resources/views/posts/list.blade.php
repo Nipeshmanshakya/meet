@@ -13,8 +13,8 @@
             </tr>
             @foreach( $posts as $post )
             <tr>
-                <th>{{ $post->id }}</th>
-                <th>{{ $post->post }}</th>
+                <td>{{ $post->id }}</td>
+                <td>{{ $post->post }}</td>
             </tr>
             @endforeach
         </table>

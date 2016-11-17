@@ -37,7 +37,7 @@ class LoginController extends Controller
             return redirect('posts');
         }
 
-        dd( "failed");
+        return redirect()->back();
 
     }
 
