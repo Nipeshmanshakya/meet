@@ -33,12 +33,20 @@ class LoginController extends Controller
         $userData = $request->only(['email','password']);
 
         if( Auth::attempt( $userData ) ) {
-
+            $user = Auth::user();
+            $user->auth_token = md5( $user->email . time() . str_random() );
+            $user->save();
             return redirect('posts');
         }
 
         return redirect()->back();
 
+    }
+
+    function logout() {
+
+        Auth::logout();
+        return redirect('login');
     }
 
 
